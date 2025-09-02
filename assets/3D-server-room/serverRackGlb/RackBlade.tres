@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bh8mqgqkqicki"]
+
+[ext_resource type="Texture2D" uid="uid://b107jsxfnd5ov" path="res://assets/3D-server-room/RackTexture.png" id="1_vr7aa"]
+[ext_resource type="Texture2D" uid="uid://kl5o1iy4cwyi" path="res://assets/3D-server-room/RackSmooth.png" id="2_hne3j"]
+
+[resource]
+resource_name = "RackBlade"
+cull_mode = 2
+albedo_texture = ExtResource("1_vr7aa")
+metallic_texture = ExtResource("2_hne3j")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_hne3j")
+roughness_texture_channel = 1

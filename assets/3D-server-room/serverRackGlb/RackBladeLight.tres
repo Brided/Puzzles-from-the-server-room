@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://belxupfwti0b0"]
+
+[resource]
+resource_name = "RackBladeLight"
+cull_mode = 2
+albedo_color = Color(0.121569, 1, 0.0745091, 1)
+roughness = 0.5
+emission_enabled = true
+emission = Color(0.121567, 1, 0.0745078, 1)
+emission_energy_multiplier = 1.00002

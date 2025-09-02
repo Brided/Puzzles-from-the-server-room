@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://k8jhpih3sq1f"]
+
+[ext_resource type="Texture2D" uid="uid://b0ttjcrijrysw" path="res://assets/2D-tiles/sokobanTiles.png" id="1_4u4ju"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2p8t4"]
+size = Vector2(80, 80)
+
+[node name="goal" type="StaticBody2D"]
+z_index = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_4u4ju")
+region_enabled = true
+region_rect = Rect2(240, 0, 80, 80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2p8t4")

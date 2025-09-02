@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bh1a7khax7bgy"]
+
+[resource]
+resource_name = "Screen"
+cull_mode = 2
+albedo_color = Color(0.825628, 0.7655, 0.32706, 1)
+roughness = 0.5
+metadata/extras = {
+"mmd_material": {},
+"paint_system": {}
+}

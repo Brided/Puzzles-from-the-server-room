@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://caxsvoqw1444d"]
+
+[resource]
+resource_name = "CeilingTileLight"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 0.894122, 1)
+roughness = 0.859091
+emission_enabled = true
+emission = Color(1, 1, 0.894122, 1)
+emission_energy_multiplier = 3.4

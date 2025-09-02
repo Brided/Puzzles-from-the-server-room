@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2ktveh1ix776"]
+
+[ext_resource type="Script" uid="uid://ivli8t1tv1mp" path="res://scripts/sokoban/sokoban_pushing.gd" id="1_138xt"]
+[ext_resource type="PackedScene" uid="uid://bbhwkn6yf5iuo" path="res://scenes/puzzling/LevelLoader.tscn" id="1_we386"]
+[ext_resource type="Texture2D" uid="uid://befrseprnunkb" path="res://icons/bull_icon.svg" id="3_37wmy"]
+[ext_resource type="PackedScene" uid="uid://e6mtqbxgjop5" path="res://scenes/puzzling/MainSokoChar.tscn" id="3_mnny5"]
+[ext_resource type="Texture2D" uid="uid://d3kn6fsnxuxad" path="res://assets/2D-background/background_orange.png" id="4_soo5s"]
+
+[node name="sokoban_pushing" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_138xt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="BackgroundOrange" type="Control" parent="Camera2D"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/BackgroundOrange"]
+z_index = -4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_soo5s")
+stretch_mode = 3
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Camera2D"]
+texture_filter = 1
+amount = 20
+texture = ExtResource("3_37wmy")
+lifetime = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(500, 500)
+spread = 180.0
+gravity = Vector2(0, 50)
+initial_velocity_min = 100.0
+initial_velocity_max = 500.0
+angular_velocity_min = -240.0
+angular_velocity_max = 240.0
+
+[node name="LevelLoader" parent="." instance=ExtResource("1_we386")]
+
+[node name="MainSokoChar" parent="LevelLoader" instance=ExtResource("3_mnny5")]
+
+[node name="PlayerPos" type="Node2D" parent="LevelLoader"]

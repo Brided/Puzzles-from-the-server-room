@@ -1,0 +1,134 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://67k077s845gs"
+path="res://.godot/imported/serverRoom.glb-e320e7006ef5875a2b70e63bca903e87.scn"
+
+[deps]
+
+source_file="res://assets/3D-server-room/serverRackGlb/serverRoom.glb"
+dest_files=["res://.godot/imported/serverRoom.glb-e320e7006ef5875a2b70e63bca903e87.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"CeilingTileLight": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/3D-server-room/serverRackGlb/CeilingTileLight.tres"
+},
+"CeilingTileLining": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/3D-server-room/serverRackGlb/CeilingTileLining.tres"
+},
+"CeilingTilePanel": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/3D-server-room/serverRackGlb/CeilingTilePanel.tres"
+},
+"FloorBakedTexture": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/3D-server-room/serverRackGlb/FloorBakedTexture.tres"
+},
+"Glass": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/3D-server-room/serverRackGlb/Glass.tres"
+},
+"Rack": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/3D-server-room/serverRackGlb/Rack.tres"
+},
+"RackBlade": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/3D-server-room/serverRackGlb/RackBlade.tres"
+},
+"RackBladeLight": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/3D-server-room/serverRackGlb/RackBladeLight.tres"
+},
+"Room": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/3D-server-room/serverRackGlb/Room.tres"
+}
+},
+"meshes": {
+"serverRoom_Blade": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/3D-server-room/serverRackGlb/serverRoom_Blade.res"
+},
+"serverRoom_BladeLight": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/3D-server-room/serverRackGlb/serverRoom_BladeLight.res"
+},
+"serverRoom_Ceiling": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/3D-server-room/serverRackGlb/serverRoom_Ceiling.res"
+},
+"serverRoom_Cube": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/3D-server-room/serverRackGlb/serverRoom_Cube.res"
+},
+"serverRoom_Floor": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/3D-server-room/serverRackGlb/serverRoom_Floor.res"
+},
+"serverRoom_Rack": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/3D-server-room/serverRackGlb/serverRoom_Rack.res"
+},
+"serverRoom_RackDoor": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://assets/3D-server-room/serverRackGlb/serverRoom_RackDoor.res"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

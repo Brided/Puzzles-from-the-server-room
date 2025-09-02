@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bwcl5ft0ycd1"]
+
+[sub_resource type="Gradient" id="Gradient_3py6t"]
+colors = PackedColorArray(0.345485, 0.4188, 0.48181, 1, 0.697262, 0.710183, 0.721195, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8ixaj"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rkyqs"]
+width = 80
+height = 100
+color_ramp = SubResource("Gradient_3py6t")
+noise = SubResource("FastNoiseLite_8ixaj")
+
+[resource]
+resource_name = "Room"
+cull_mode = 2
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+albedo_texture = SubResource("NoiseTexture2D_rkyqs")
+roughness = 0.5

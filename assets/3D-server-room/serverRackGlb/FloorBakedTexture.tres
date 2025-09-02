@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://0euph86kwbri"]
+
+[ext_resource type="Texture2D" uid="uid://3q4b6r7nd2xs" path="res://assets/3D-server-room/serverRackGlb/serverRoom_TileTexture.png" id="1_ffjy7"]
+[ext_resource type="Texture2D" uid="uid://sic3tkdyj413" path="res://assets/3D-server-room/serverRackGlb/serverRoom_TileRoughness.png" id="2_2i1gt"]
+
+[resource]
+resource_name = "FloorBakedTexture"
+cull_mode = 2
+albedo_texture = ExtResource("1_ffjy7")
+metallic_texture = ExtResource("2_2i1gt")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_2i1gt")
+roughness_texture_channel = 1

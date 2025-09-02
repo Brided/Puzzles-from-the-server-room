@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://bthsbei60dg0t"]
+
+[ext_resource type="Script" uid="uid://d70cir00ll70" path="res://scripts/ui/ui_interact.gd" id="1_5wwk3"]
+[ext_resource type="Texture2D" uid="uid://befrseprnunkb" path="res://icons/bull_icon.svg" id="2_2irk1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5wwk3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5wwk3"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_5wwk3"]
+Button/font_sizes/font_size = 40
+HSeparator/styles/separator = SubResource("StyleBoxEmpty_5wwk3")
+Panel/styles/panel = SubResource("StyleBoxFlat_5wwk3")
+VBoxContainer/constants/separation = 10
+
+[node name="MenuOverlay" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_5wwk3")
+
+[node name="MenuUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5wwk3")
+
+[node name="Panel" type="Panel" parent="MenuUI"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -162.0
+offset_right = 310.0
+offset_bottom = 162.0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuUI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuUI/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="HSeparator" type="HSeparator" parent="MenuUI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Continue" type="Button" parent="MenuUI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="New game" type="Button" parent="MenuUI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "New Game"
+
+[node name="Options" type="Button" parent="MenuUI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Credits" type="Button" parent="MenuUI/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[node name="TextureRect" type="TextureRect" parent="MenuUI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -152.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = 148.0
+grow_horizontal = 0
+texture = ExtResource("2_2irk1")
+
+[node name="Quit" type="Button" parent="MenuUI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -83.0
+offset_right = -24.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Exit
+"
+
+[connection signal="pressed" from="MenuUI/Panel/MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="MenuUI/Panel/MarginContainer/VBoxContainer/New game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="MenuUI/Quit" to="." method="_on_quit_pressed"]

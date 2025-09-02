@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf8kqd0hbc4vp"]
+
+[ext_resource type="Script" uid="uid://c5p0em4gpmdpf" path="res://scripts/movements/camera_3d_movements.gd" id="1_hjq68"]
+[ext_resource type="Environment" uid="uid://cypkp2nd8y3yh" path="res://scenes/server_room/server_room_env.tres" id="2_5knt1"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_hjq68"]
+resource_local_to_scene = true
+dof_blur_far_enabled = true
+dof_blur_far_distance = 1.5
+dof_blur_far_transition = 1.0
+dof_blur_near_distance = 0.1
+
+[node name="LookCamera" type="Node3D"]
+script = ExtResource("1_hjq68")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+environment = ExtResource("2_5knt1")
+attributes = SubResource("CameraAttributesPractical_hjq68")
+current = true

@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://bherxbo8ohap2"]
+
+[ext_resource type="PackedScene" uid="uid://cbsc2oa02e2y6" path="res://assets/3D-monitor/monitor.blend" id="1_ax5f7"]
+[ext_resource type="Script" uid="uid://ckbmms40vnv1r" path="res://scripts/monitor_whole.gd" id="2_eltj1"]
+[ext_resource type="PackedScene" uid="uid://c2ktveh1ix776" path="res://scenes/puzzling/Puzzling.tscn" id="2_pjjn4"]
+[ext_resource type="PackedScene" uid="uid://cf8kqd0hbc4vp" path="res://scenes/server_room/look_camera.tscn" id="4_t53mi"]
+[ext_resource type="Script" uid="uid://ccnx7gag7xwru" path="res://scripts/keyboard_sound.gd" id="5_gj77m"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ax5f7"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ax5f7"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_ax5f7")
+emission_enabled = true
+emission = Color(0.593134, 0.593134, 0.593134, 1)
+emission_energy_multiplier = 0.55
+emission_operator = 1
+emission_texture = SubResource("ViewportTexture_ax5f7")
+texture_filter = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t53mi"]
+size = Vector3(1.28, 0.8, 0.655)
+
+[node name="monitor" groups=["monitor"] instance=ExtResource("1_ax5f7")]
+script = ExtResource("2_eltj1")
+
+[node name="Screen" parent="." index="0"]
+surface_material_override/1 = SubResource("StandardMaterial3D_ax5f7")
+metadata/_edit_lock_ = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Screen" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00412798, 0.0235583)
+light_color = Color(0.306923, 0.306923, 0.306923, 1)
+shadow_enabled = true
+omni_range = 1.0
+omni_attenuation = -0.75
+
+[node name="SubViewport" type="SubViewport" parent="." index="1"]
+size = Vector2i(1080, 1080)
+
+[node name="Puzzling" parent="SubViewport" index="0" instance=ExtResource("2_pjjn4")]
+
+[node name="LookCamera" parent="." index="3" instance=ExtResource("4_t53mi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01, 0.558)
+
+[node name="Area3D" type="Area3D" parent="." index="4"]
+script = ExtResource("5_gj77m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_t53mi")
+
+[node name="KeyboardSounds" type="AudioStreamPlayer3D" parent="Area3D" index="1"]
+volume_db = -20.0
+pitch_scale = 1.4
+
+[node name="MouseSounds" type="AudioStreamPlayer3D" parent="Area3D" index="2"]
+volume_db = -20.0
+pitch_scale = 1.2
+
+[connection signal="toggle_input_signal" from="." to="SubViewport/Puzzling" method="_on_monitor_toggle_input_signal"]
+[connection signal="toggle_input_signal" from="." to="LookCamera" method="_on_monitor_toggle_input_signal"]

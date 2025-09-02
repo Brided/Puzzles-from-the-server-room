@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://daqbmkw1h0rnt"]
+
+[ext_resource type="Environment" uid="uid://cypkp2nd8y3yh" path="res://scenes/server_room/server_room_env.tres" id="1_2yonq"]
+[ext_resource type="PackedScene" uid="uid://bherxbo8ohap2" path="res://scenes/server_room/monitor.tscn" id="1_xhyyi"]
+[ext_resource type="PackedScene" uid="uid://qfckdmrfarky" path="res://scenes/server_room/server_room_model.tscn" id="3_ibueo"]
+[ext_resource type="PackedScene" uid="uid://bthsbei60dg0t" path="res://scenes/menu_overlay.tscn" id="3_xhyyi"]
+
+[node name="ServerRoom" type="Node3D"]
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_2yonq")
+
+[node name="monitor" parent="." instance=ExtResource("1_xhyyi")]
+
+[node name="serverRoom" parent="." instance=ExtResource("3_ibueo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="MenuOverlay" parent="." instance=ExtResource("3_xhyyi")]
