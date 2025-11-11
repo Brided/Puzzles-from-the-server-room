@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://clmcf0fipqfqw"]
+
+[ext_resource type="Script" uid="uid://b5jml75ythlnt" path="res://scripts/sokoban/grid/tiles/tile_box.gd" id="1_bm251"]
+
+[node name="TileBox" type="Node2D"]
+script = ExtResource("1_bm251")
+metadata/_custom_type_script = "uid://b5jml75ythlnt"

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cbsc2oa02e2y6" path="res://assets/3D-monitor/monitor.blend" id="1_ax5f7"]
 [ext_resource type="Script" uid="uid://ckbmms40vnv1r" path="res://scripts/monitor_whole.gd" id="2_eltj1"]
-[ext_resource type="PackedScene" uid="uid://c2ktveh1ix776" path="res://scenes/puzzling/Puzzling.tscn" id="2_pjjn4"]
+[ext_resource type="PackedScene" uid="uid://dltwnwxdf8bn0" path="res://scenes/puzzling/levelScreen.tscn" id="4_7b22p"]
 [ext_resource type="PackedScene" uid="uid://cf8kqd0hbc4vp" path="res://scenes/server_room/look_camera.tscn" id="4_t53mi"]
 [ext_resource type="Script" uid="uid://ccnx7gag7xwru" path="res://scripts/keyboard_sound.gd" id="5_gj77m"]
 
@@ -39,7 +39,7 @@ omni_attenuation = -0.75
 [node name="SubViewport" type="SubViewport" parent="." index="1"]
 size = Vector2i(1080, 1080)
 
-[node name="Puzzling" parent="SubViewport" index="0" instance=ExtResource("2_pjjn4")]
+[node name="LevelScreen" parent="SubViewport" index="0" instance=ExtResource("4_7b22p")]
 
 [node name="LookCamera" parent="." index="3" instance=ExtResource("4_t53mi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01, 0.558)
@@ -59,5 +59,4 @@ pitch_scale = 1.4
 volume_db = -20.0
 pitch_scale = 1.2
 
-[connection signal="toggle_input_signal" from="." to="SubViewport/Puzzling" method="_on_monitor_toggle_input_signal"]
 [connection signal="toggle_input_signal" from="." to="LookCamera" method="_on_monitor_toggle_input_signal"]

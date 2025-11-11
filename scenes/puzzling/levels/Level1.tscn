@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvbhp1nmx60am"]
+
+[ext_resource type="Script" uid="uid://q3a5338sgm03" path="res://scripts/sokoban/grid/node2D_graphic/sokoban_grid.gd" id="1_an2ao"]
+[ext_resource type="PackedScene" uid="uid://blhiioj35g0i0" path="res://scenes/puzzling/tiles/box.tscn" id="2_ulfy1"]
+[ext_resource type="PackedScene" uid="uid://x72lmf4df8y0" path="res://scenes/puzzling/tiles/wall.tscn" id="3_6kjfl"]
+[ext_resource type="PackedScene" uid="uid://k8jhpih3sq1f" path="res://scenes/puzzling/tiles/goal.tscn" id="4_85y68"]
+[ext_resource type="PackedScene" uid="uid://v3f6a566ayxo" path="res://scenes/puzzling/tiles/grass.tscn" id="5_ka2uw"]
+[ext_resource type="PackedScene" uid="uid://e6mtqbxgjop5" path="res://scenes/puzzling/tiles/MainSokoChar.tscn" id="6_21o3h"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_an2ao")
+
+[node name="box" parent="." instance=ExtResource("2_ulfy1")]
+
+[node name="box4" parent="." instance=ExtResource("2_ulfy1")]
+position = Vector2(80, -80)
+
+[node name="box3" parent="." instance=ExtResource("2_ulfy1")]
+position = Vector2(-80, -160)
+
+[node name="box2" parent="." instance=ExtResource("2_ulfy1")]
+position = Vector2(80, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="wall" parent="." instance=ExtResource("3_6kjfl")]
+position = Vector2(-160, -80)
+
+[node name="wall2" parent="." instance=ExtResource("3_6kjfl")]
+position = Vector2(-160, -160)
+
+[node name="goal" parent="." instance=ExtResource("4_85y68")]
+position = Vector2(-80, -80)
+
+[node name="grass" parent="." instance=ExtResource("5_ka2uw")]
+position = Vector2(-80, -80)
+
+[node name="grass2" parent="." instance=ExtResource("5_ka2uw")]
+position = Vector2(-80, -160)
+
+[node name="MainSokoChar" parent="." instance=ExtResource("6_21o3h")]
+position = Vector2(240, -80)

@@ -1,17 +1,20 @@
-class_name Pushing
 extends Node2D
+class_name Pushing
 
 @warning_ignore("integer_division")
+
+@onready var sokoban_grid_state := SokobanGridState.new()
+var grid_size := SokobanGrid.TILE_SIZE
 
 const LVL_001:= "res://scenes/puzzling/levels/lvl-001.txt"
 const LVL_002:= "res://scenes/puzzling/levels/lvl-002.txt"
 const LVL_LIST:= [LVL_001, LVL_002]
 var cur_lvl:= -1
 
-@export var grid_size := Globals.TILE_SIZE
 var level_map = {} # dictionary storing positions of walls/boxes/goals
 var boxes = []
 var goals = []
+
 var state_history = []
 var cur_state: Dictionary
 var start_state: Dictionary

@@ -1,0 +1,14 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbhwkn6yf5iuo"]
+
+[ext_resource type="Script" uid="uid://bdvw5vol3o1a" path="res://scripts/sokoban/legacy/sokoban_loading.gd" id="1_teq2v"]
+[ext_resource type="PackedScene" uid="uid://x72lmf4df8y0" path="res://scenes/puzzling/tiles/wall.tscn" id="2_7r211"]
+[ext_resource type="PackedScene" uid="uid://v3f6a566ayxo" path="res://scenes/puzzling/tiles/grass.tscn" id="3_5yt1p"]
+[ext_resource type="PackedScene" uid="uid://blhiioj35g0i0" path="res://scenes/puzzling/tiles/box.tscn" id="4_wuchc"]
+[ext_resource type="PackedScene" uid="uid://k8jhpih3sq1f" path="res://scenes/puzzling/tiles/goal.tscn" id="5_68cts"]
+
+[node name="LevelLoader" type="Node2D"]
+script = ExtResource("1_teq2v")
+wall_scene = ExtResource("2_7r211")
+floor_scene = ExtResource("3_5yt1p")
+box_scene = ExtResource("4_wuchc")
+goal_scene = ExtResource("5_68cts")

@@ -1,22 +1,22 @@
 [gd_scene load_steps=9 format=3 uid="uid://e6mtqbxgjop5"]
 
-[ext_resource type="Script" uid="uid://fjiktdgi5htn" path="res://scripts/movements/main_soko_char.gd" id="1_5g1d8"]
-[ext_resource type="Texture2D" uid="uid://f6wro84rquf4" path="res://assets/2D-characters/bull.png" id="1_dqbiv"]
+[ext_resource type="Script" uid="uid://fjiktdgi5htn" path="res://scripts/sokoban/grid/tiles/tile_char.gd" id="1_mydwv"]
+[ext_resource type="Texture2D" uid="uid://f6wro84rquf4" path="res://assets/2D-characters/bull.png" id="2_6mh5a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5g1d8"]
-atlas = ExtResource("1_dqbiv")
+atlas = ExtResource("2_6mh5a")
 region = Rect2(0, 0, 80, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w0nym"]
-atlas = ExtResource("1_dqbiv")
+atlas = ExtResource("2_6mh5a")
 region = Rect2(80, 0, 80, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17yhn"]
-atlas = ExtResource("1_dqbiv")
+atlas = ExtResource("2_6mh5a")
 region = Rect2(160, 0, 80, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a3wac"]
-atlas = ExtResource("1_dqbiv")
+atlas = ExtResource("2_6mh5a")
 region = Rect2(240, 0, 80, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gu5qa"]
@@ -59,7 +59,7 @@ size = Vector2(80, 80)
 
 [node name="MainSokoChar" type="CharacterBody2D"]
 z_index = 4
-script = ExtResource("1_5g1d8")
+script = ExtResource("1_mydwv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 4
