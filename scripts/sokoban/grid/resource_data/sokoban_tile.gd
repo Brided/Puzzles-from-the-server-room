@@ -18,7 +18,7 @@ func init_from_world_pos(world_pos: Vector2):
 func init_from_grid_pos(new_pos: SokobanPosition):
 	grid_pos = new_pos
 
-func move_dir(direction: Vector2i, grid: SokobanGridState):
+func move_dir(direction: Vector2i, grid: SokobanGridState) -> bool:
 	var new_grid_pos = grid_pos.add(direction)
 
 	var tiles_at_new_pos = get_tiles_at_pos(new_grid_pos, grid)
@@ -27,18 +27,20 @@ func move_dir(direction: Vector2i, grid: SokobanGridState):
 		for tile in tiles_at_new_pos.array:
 			if tile.type == "Wall":
 				print("Blocked by wall at ", new_grid_pos.pos)
-				return
+				return false
 			elif tile.type == "Box":
 				print("Pushing box at ", new_grid_pos.pos)
-				tile.move_dir(direction, grid)
+				if not tile.move_dir(direction, grid):
+					return false
 	
+	grid_pos = new_grid_pos
+	return true
+
+func move_to(new_grid_pos: SokobanPosition):
 	grid_pos = new_grid_pos
 
 func get_tiles_at_pos(pos: SokobanPosition, grid: SokobanGridState) -> SokobanTileList:
 	return grid.get_tiles_at_pos(pos)
-
-func move_to(new_grid_pos: SokobanPosition):
-	grid_pos = new_grid_pos
 
 func copy() -> SokobanTile:
 	var new_tile = SokobanTile.new()

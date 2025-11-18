@@ -31,10 +31,6 @@ func get_all_tiles() -> Array[SokobanTile]:
 func clear():
 	array.clear()
 
-# Count the number of tiles
-func count() -> int:
-	return array.size()
-
 # Find a tile by type
 func find_by_type(type_name: String) -> Array[SokobanTile]:
 	var result: Array[SokobanTile] = []

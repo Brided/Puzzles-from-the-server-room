@@ -25,13 +25,9 @@ func get_tiles(type_name: String) -> SokobanTileList:
 
 func get_tiles_at_pos(pos: SokobanPosition) -> SokobanTileList:
 	var tiles: SokobanTileList = SokobanTileList.new()
-	print("checking for tiles at pos ", pos.pos)
 	for tile in level_map:
-		print("Checking tile ", tile, " at pos ", pos.pos)
 		if pos.equals(tile.grid_pos):
-			print("does match!")
 			tiles.append(tile)
-	print("Tiles at pos ", pos.pos, ": ", tiles.array)
 	return tiles
 
 func dup() -> SokobanGridState:
@@ -53,9 +49,14 @@ func dup() -> SokobanGridState:
 
 func _to_string():
 	var res := ""
+	res += "SokobanGridState:\n"
+	
+	res += "Level Map:\n"
 	for tile in level_map:
 		res += str(tile) + "\n"
+
+	res += "Tiles by Type:\n"
 	for type in tiles_by_type:
-		print(type, tiles_by_type[type])
-		
+		res += "Type: " + type + "\n"
+	
 	return res

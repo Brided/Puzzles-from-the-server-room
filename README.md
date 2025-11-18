@@ -73,4 +73,4 @@ This project includes the GUT testing framework which is licensed under the MIT 
 ---
 
 Made with [Godot Engine](https://godotengine.org/)
-With GUT (Godot Unit Testing)
+with GUT (Godot Unit Testing)

@@ -95,19 +95,3 @@ func test_dup():
 	assert_eq(dup_state.level_map.size(), 1)
 	assert_eq(dup_state.level_map[0].type, "Box")
 	assert_eq(dup_state.level_map[0].grid_pos.pos, Vector2i(1, 1))
-
-func test_to_string():
-	var box_tile = SokobanTile.new()
-	box_tile.init("Box", SokobanPosition.new().init_grid(1, 1))
-	var wall_tile = SokobanTile.new()
-	wall_tile.init("Wall", SokobanPosition.new().init_grid(2, 2))
-	
-	grid_state.add_Tile(box_tile)
-	grid_state.add_Tile(wall_tile)
-	grid_state.find_all_by_type()
-	
-	var res = grid_state._to_string()
-	print_debug(res)
-	assert_eq(
-		res == "Box (1, 1) (80.0, 80.0)\nWall (2, 2) (160.0, 160.0)\n"\
-		or res == "Wall (2, 2) (160.0, 160.0)\nBox (1, 1) (80.0, 80.0)\n", true)

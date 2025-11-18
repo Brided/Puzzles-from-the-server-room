@@ -9,11 +9,13 @@ var redo_history: Array[SokobanGridState] = []
 
 func starts(start: SokobanGridState):
 	start_state = start.dup()
+	current_state = start.dup()
 	history.clear()
 	redo_history.clear()
 
 func do(new_state: SokobanGridState):
-	history.append(new_state.dup())
+	history.append(current_state.dup())
+	current_state = new_state.dup()
 	redo_history.clear()
 
 func restart(discard_state: SokobanGridState) -> SokobanGridState:
