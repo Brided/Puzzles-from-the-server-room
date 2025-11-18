@@ -4,6 +4,10 @@ class_name SokobanPosition
 var pos: Vector2i = Vector2i.ZERO # coordinates in the grid
 const TILE_SIZE = SokobanGrid.TILE_SIZE
 
+func dup() -> SokobanPosition:
+	var new_self = self.duplicate(true)
+	return new_self
+
 ## Init with grid_pos as Vector2
 func init_grid_vector(grid_pos: Vector2i) -> SokobanPosition:
 	pos = grid_pos
@@ -33,6 +37,9 @@ func world_to_grid(world_pos: Vector2) -> Vector2i:
 func add(added: Vector2i) -> SokobanPosition:
 	var new_pos = pos + added
 	return SokobanPosition.new().init_grid_vector(new_pos)
+
+func equals(other: SokobanPosition) -> bool:
+	return pos == other.pos
 
 func _to_string() -> String:
 	return str(pos) + " " + str(self.to_world_pos())

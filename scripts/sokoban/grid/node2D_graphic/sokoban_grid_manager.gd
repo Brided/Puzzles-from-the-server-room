@@ -44,6 +44,7 @@ func _process(delta):
 			current_level.undo()
 			moving = true
 		elif Input.is_action_just_pressed("char_restart"):
+			current_level.restart()
 			moving = true
 		
 	

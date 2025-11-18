@@ -13,7 +13,7 @@ config_version=5
 config/name="Puzzling from the server room"
 config/description="Puzzling from the server room."
 run/main_scene="uid://daqbmkw1h0rnt"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/show_image=false
 config/icon="uid://befrseprnunkb"
 config/windows_native_icon="res://icons/bull_ico.ico"
@@ -22,6 +22,10 @@ config/main_scene="uid://c2ktveh1ix776"
 [autoload]
 
 Globals="*res://scripts/globals.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 [global_group]
 

@@ -2,10 +2,9 @@ extends SokobanTileMove
 
 class_name TileBox
 
-func _init():
-	tile_data.change_type("Box")
-
 func _ready():
+	super._ready()
+	tile_data.change_type("Box")
 	z_index = 0
 
 func on_push(direction: Vector2):

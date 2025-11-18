@@ -2,8 +2,10 @@ extends SokobanTileMove
 
 class_name SokobanPlayer
 
-func _init():
+func _ready():
+	super._ready()
 	tile_data.change_type("Player")
+	z_index = 1
 
 func move_dir(direction: Vector2i):
 	move_to(tile_data.grid_pos.add(direction))
