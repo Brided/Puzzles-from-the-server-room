@@ -8,8 +8,8 @@ colors = PackedColorArray(0.345485, 0.4188, 0.48181, 1, 0.697262, 0.710183, 0.72
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rkyqs"]
 width = 80
 height = 100
-color_ramp = SubResource("Gradient_3py6t")
 noise = SubResource("FastNoiseLite_8ixaj")
+color_ramp = SubResource("Gradient_3py6t")
 
 [resource]
 resource_name = "Room"
